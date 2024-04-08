@@ -2,8 +2,7 @@ serverFiles:
   alerting_rules.yml:
       groups:
       - name: NodeDown
-        rules:
-       
+        rules:     
         - alert: InstanceDown
           expr: up{job="kubernetes-nodes"} == 0
           for: 2m
